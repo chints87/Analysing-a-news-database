@@ -9,7 +9,7 @@ send queries to the PostgreSQL database to produce a report that generates:
 ## Install
 1. In order to run a virtual machine on your host, download and install [VirtualBox](https://www.virtualbox.org/wiki/Download_Old_Builds_5_1). 
 2. Download and install [Vagrant](https://www.vagrantup.com/) that will enable sharing of files between the host and virtual machine. 
-3. Clone the repository to your localhost from here[] and give it the folder a name, for example in this case **newsdata**.
+3. Clone the repository to your localhost from here[https://github.com/chints87/newsdata.git] and give it the folder a name, for example in this case **newsdata**.
 4. The Vagrantfile is the configuration file to setup the VM. 
 
 In the git bash, locate the *vagrant* directory and use _vagrant up_ to configure the VM that will install all requirements, found in the Vagrantfile, needed for this project. Log into the Linux OS using *vagrant ssh* and it would contain *Python, PostgresSQL and pyscopg2* components. The **newsdata** database can be downloaded from [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip). Extract and move the **newsdata.sql** file into the folder **newsdata** created eralier. 
