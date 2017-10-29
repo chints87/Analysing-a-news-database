@@ -65,10 +65,10 @@ def mosterror(conn, cursor):
     """List day with request errors more than 1% from the news database"""
 
     cursor.execute(
-           """SELECT requestbad.date, 
+           """SELECT requestbad.date,
            ROUND(requestbad.type * 100.0 / totalhits.hits, 3) as percent
            FROM requestbad, totalhits
-           WHERE requestbad.date = totalhits.date 
+           WHERE requestbad.date = totalhits.date
            AND ROUND(requestbad.type * 100.0 / totalhits.hits, 3) > 1.0;""")
 
     # Result is a python list
@@ -78,8 +78,8 @@ def mosterror(conn, cursor):
     # the highest bad request as percentage of total requests.
 
     for date, percentage in results:
-        print ("\nOn which days did more than 1 percent requests lead " \
-         "to errors?\n")
+        print("\nOn which days did more than 1 percent requests lead ",
+              "\nto errors?\n")
         print('{0:%d, %B %Y} : {1:.2f}% errors'.format(date, percentage))
 
 
