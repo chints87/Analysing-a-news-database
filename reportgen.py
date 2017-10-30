@@ -33,10 +33,10 @@ def mostarticles(conn, cursor):
 
     # Text is generated as output from the print statement of total views of
     # of top three most read articles
-    print ("\nWhat are the most popular three articles of all time?\n")
+    print("\nWhat are the most popular three articles of all time?\n")
 
     for articleid, title, views in results:
-        print ('\"{}\" - {}'.format(title, views))
+        print('\"{}\" - {}'.format(title, views))
 
 
 def mostreadauthor(conn, cursor):
@@ -55,7 +55,7 @@ def mostreadauthor(conn, cursor):
 
     # Text is generated as output from the print statement of most read author
     # from the results list.
-    print ("\nWhat are the most read article authors of all time?\n")
+    print("\nWhat are the most read article authors of all time?\n")
 
     for author, views in results:
         print("{} - {} views".format(author, views))
